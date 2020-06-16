@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <br><br>
+    <h2>Generate a Password</h2>
+    
+    <form>
+      <h4>Select password length</h4>
+        <!-- <div id="length-form">
+          <label for="pwLength">Length must be from 8-28</label><br>
+          <input type="text" id="pwLength" name="pwLength" ><br>
+        </div> 
+     -->
+     <div id="length-form">
+        <p>Password length</p>
+        8
+        <input type="range" min="8" max="28" value="">
+28
+     </div>
+
+       <h4>Select character type</h4>
+    <div class="characters-form">
+       
+    <label class="switch col">
+      <input type="checkbox" id="specialChar"  required="required">
+      <span class="checkbox">SpecialChar</span>
+    </label>
+    
+    <label class="switch col">
+      <input type="checkbox" id="numerical"  required="required">
+      <span class="checkbox">Numbers</span>
+    </label>
+    
+    <label class="switch col">
+      <input type="checkbox" id="Lowercase"  required="required">
+      <span class="checkbox">Lowercase</span>
+    </label>
+    
+    <label class="switch col">
+      <input type="checkbox" id="Uppercase"  required="required">
+      <span class="checkbox">Uppercase</span>
+    </label>
+    
+     </div>
+    </form>
+  
+    
+    
+    
+    <textarea
+      readonly
+      id="password"
+      placeholder="Your Secure Password"
+      aria-label="Generated Password"></textarea>
+    <button id="generate">Generate Password</button>
+    <button id="copy">
+      Copy to Clipboard
+    </button>
+  
+    <script src="./script.js"></script>
+  </body>
+</html>
