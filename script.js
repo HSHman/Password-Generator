@@ -1,7 +1,7 @@
 
 var generateButton = document.getElementById('generate');
 var copyPass = document.getElementById('copy');
-var lengthInput = document.getElementById('pwLength');
+// var lengthInput = document.getElementById('pwLength');
 
     var makeSpecial = document.getElementById("specialChar");
     var makeNum = document.getElementById( "numerical");
@@ -9,7 +9,22 @@ var lengthInput = document.getElementById('pwLength');
     var makeCaps = document.getElementById("Uppercase");
     
 
+    
 
+    
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("pwLength");
+    if (slider.oninput = false){output.innerHTML = slider.value.hide()} else {
+    output.innerHTML = slider.value + ' characters';}
+    
+    
+    
+    slider.oninput = function() {
+      output.innerHTML = this.value + ' characters';
+    }
+    
+    
+    
     function aPassword() {
         var allChar = '';
         var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -71,15 +86,24 @@ var lengthInput = document.getElementById('pwLength');
         checked = false;
     }
 
-    var passLength  = lengthInput.value;
-    if (lengthInput !== undefined  && passLength >= 8 && passLength <=28 ) {
-        // alert(passLength);
-        lengthEntered = true;
-    } else {
-        alert("Please enter appropriate password length") 
-        lengthEntered = false;
-    }
+    // var passLength  = lengthInput.value;
+    // if (lengthInput !== undefined  && passLength >= 8 && passLength <=28 ) {
+    //     // alert(passLength);
+    //     lengthEntered = true;
+    // } else {
+    //     alert("Please enter appropriate password length") 
+    //     lengthEntered = false;
+    // }
     
+   
+    
+    // }
+
+
+   
+   
+   
+   
     if (checked === true && lengthEntered === true){
         return aPassword();
     }
