@@ -9,66 +9,75 @@
     
     <link rel="shortcut icon" href="image/icon.ico" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <header>
-      <h1>Password Generator</h1>
-    </header>
-    <br><br>
-    <h2>Generate a Password</h2>
-    
-    <form>
-      <h4>Select password length</h4>
- 
-
-     <div class="length-form">
-      
-      <input type="range" min="8" max="28" value="8" class="slider" id="myRange">
-      
-      <p>Length: <span id="pwLength"></span></p>
-    </div>
-
-
- 
-
-       <h4>Select character type</h4>
-    <div class="characters-form">
-       
-    <label class="switch col">
-      <input type="checkbox" id="specialChar"  required="required">
-      <span class="checkbox">SpecialChar</span>
-    </label>
-    
-    <label class="switch col">
-      <input type="checkbox" id="numerical"  required="required">
-      <span class="checkbox">Numbers</span>
-    </label>
-    
-    <label class="switch col">
-      <input type="checkbox" id="Lowercase"  required="required">
-      <span class="checkbox">Lowercase</span>
-    </label>
-    
-    <label class="switch col">
-      <input type="checkbox" id="Uppercase"  required="required">
-      <span class="checkbox">Uppercase</span>
-    </label>
-    
-     </div>
-    </form>
   
+  
+  <body>
+    <div class="container-fluid">
+    
+      <header class="row"><div class="col-sm"></div><h1 class="col-sm-3">Password Generator</h1><div class="col-sm"></div></header>
+       <div class="row">    
+      <div class="col-md-3"></div>
+     
+      <form class="form-group jumbotron-fluid border shaded rounded col-md" >
+      <div class="container form-group">   
+        <h2>Generate a Password</h2>
+          
+          <div class="row"></div>
+           <h4>Select password length</h4>
+                
+                <div class="length-form">
+                  <input type="range" min="8" max="28" value="8" class="slider" id="myRange">
+                  <p>Length: <span id="pwLength"></span></p>
+                </div>
+
+              <h4>Select character type</h4>
+                <div class="form-check form-check-inline">
+                  
+                  <label class="switch">
+                    <input type="checkbox" id="specialChar"  required="required">
+                    <span class="checkbox">SpecialChar</span>
+                  </label>
+
+                  <label class="switch">
+                    <input type="checkbox" id="numerical"  required="required">
+                    <span class="checkbox">Numbers</span>
+                  </label>
+    
+                  <label class="switch">
+                    <input type="checkbox" id="Lowercase"  required="required">
+                    <span class="checkbox">Lowercase</span>
+                  </label>
+    
+                  <label class=" switch">
+                    <input type="checkbox" id="Uppercase"  required="required">
+                    <span class="checkbox">Uppercase</span>
+                  </label>
+    
+                </div>
     
     
-    
-    <textarea
-      readonly
-      id="password"
-      placeholder="Your Secure Password"
-      aria-label="Generated Password"></textarea>
-    <button id="generate">Generate Password</button>
-    <button id="copy">
-      Copy to Clipboard
-    </button>
+    <div class="row">
+            <div class="col"></div>
+            <textarea
+              readonly
+              class="form-control col-sm-7"
+              id="password"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password">
+            </textarea>
+            <div class="col"></div>
+          </div>
+            <br><br>
+            <button type="button" class="btn btn-primary" id="generate">Generate Password</button>
+            <button type="button" class="btn btn-secondary" id="copy">Copy to Clipboard</button>
+          
+          
+          </div> </form> 
+          <div class="col-md-3"></div>
+        </div>
+  </div>  
   
     <script src="./script.js"></script>
   </body>
